@@ -7,12 +7,12 @@ public class PermissaoMiddleware extends Middleware {
 
     @Override
     public boolean processar(Requisicao request) {
-        if(!request.getPermisao().equalsIgnoreCase("ADMIN")) {
+        if(!request.getPermissao().equalsIgnoreCase("ADMIN")) {
             System.out.println("PERMISSÃO: Acesso negado");
             return false;
         }
         if(proximo != null) {
-            proximo.processar(request);
+            return proximo.processar(request);
         }
         return true;
     }

@@ -21,7 +21,7 @@ public class Requisicao {
         return token;
     }
 
-    public String getPermisao() {
+    public String getPermissao() {
         return permisao;
     }
 
