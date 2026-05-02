@@ -10,9 +10,7 @@ public class ValidacaoMiddleware extends Middleware {
             System.out.println("VALIDAÇÃO: Dados inválidos");
             return false;
         }
-        else if(proximo != null) {
-            return proximo.processar(request);
-        }
-        return true;
+
+        return proximo.processar(request);
     }
 }

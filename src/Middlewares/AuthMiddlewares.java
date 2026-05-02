@@ -11,11 +11,8 @@ public class AuthMiddlewares extends Middleware {
             return false;
 
         }
-        else if(proximo != null) {
-            return proximo.processar(request);
 
-        }
-        return true;
+        return proximo.processar(request);
 
     }
 }

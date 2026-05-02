@@ -11,9 +11,8 @@ public class PermissaoMiddleware extends Middleware {
             System.out.println("PERMISSÃO: Acesso negado");
             return false;
         }
-        else if(proximo != null) {
-            return proximo.processar(request);
-        }
-        return true;
+
+        return proximo.processar(request);
+
     }
 }
